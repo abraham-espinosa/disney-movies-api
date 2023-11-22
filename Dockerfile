@@ -1,10 +1,8 @@
-FROM maven:3.9.4-openjdk-11 as build
-WORKDIR /app
-COPY pom.xml .
-COPY src/ src/
-RUN mvn -f pom.xml clean package
+FROM maven:3.8.3-jdk-11-slim AS build
+COPY . .
+RUN mvn clean package -DskipTests
 
-FROM openjdk:11-jre-slim-buster
-WORKDIR /app
-COPY --from=build /app/target/*.jar movies-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java", "-jar","/movies-0.0.1-SNAPSHOT.jar"]
+FROM openjdk:11-jdk-slim-stretch
+COPY --from=build /target/movies-0.0.1-SNAPSHOT.jar movies.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","movies.jar"]
