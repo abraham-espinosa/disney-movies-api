@@ -1,0 +1,9 @@
+org\abrahameg\movies\MovieRepository.class
+org\abrahameg\movies\MovieService.class
+org\abrahameg\movies\MovieController.class
+org\abrahameg\movies\MoviesApplication.class
+org\abrahameg\movies\ReviewController.class
+org\abrahameg\movies\Review.class
+org\abrahameg\movies\Movie.class
+org\abrahameg\movies\ReviewService.class
+org\abrahameg\movies\ReviewRepository.class
