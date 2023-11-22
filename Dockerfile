@@ -1,23 +1,10 @@
-# Usar una imagen base con JDK 11 y Maven
-FROM maven:3.9.4-openjdk-11 AS build
-
-# Establecer un directorio de trabajo
+FROM maven:3.9.4-openjdk-11 as build
 WORKDIR /app
+COPY pom.xml .
+COPY src/ src/
+RUN mvn -f pom.xml clean package
 
-# Copiar archivos de tu proyecto al directorio de trabajo
-COPY . /app
-
-# Ejecutar Maven para construir el proyecto
-RUN mvn clean package
-
-# Crear una nueva imagen basada en OpenJDK 11
 FROM openjdk:11-jre-slim-buster
-
-# Exponer el puerto que utilizará la aplicación
-EXPOSE 8080
-
-# Copiar el archivo JAR construido desde la etapa anterior
-COPY --from=build /app/target/movies-0.0.1-SNAPSHOT.jar /app/movies-0.0.1-SNAPSHOT.jar
-
-# Establecer el punto de entrada para ejecutar la aplicación
-ENTRYPOINT ["java", "-jar", "/app/movies-0.0.1-SNAPSHOT.jar"]
+WORKDIR /app
+COPY --from=build /app/target/*.jar movies-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar","/movies-0.0.1-SNAPSHOT.jar"]
