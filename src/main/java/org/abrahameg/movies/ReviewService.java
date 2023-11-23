@@ -6,12 +6,17 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ReviewService {
     @Autowired
     private ReviewRepository reviewRepository;
     @Autowired
     private MongoTemplate mongoTemplate;
+    public List<Review> allReviews(){
+        return reviewRepository.findAll();
+    }
     public Review createReview(String reviewBody, String imdbId) {
         Review review = reviewRepository.insert(new Review(reviewBody));
 
