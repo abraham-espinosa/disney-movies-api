@@ -11,15 +11,16 @@ public class MoviesApplication {
 	 public String textBlock = """
 			           <html>
 			               <body>
-			               	   <h1>Disney Movies API</h1>
-			                   <p>Get access to top disney movies of all-time and create reviews for each movie.</p>
-			                   <h2>How to use Disney Movies API to get and post data:</h2>
+			               	   <h1>Disney Movies REST API</h1>
+			                   <p>Get access to top disney movies and create reviews for each movie.</p>
+			                   <h2>How to use Disney Movies API:</h2>
 			                   <p>Main URL: https://abrahameg-movies.onrender.com</p>
+			                   <h2>API Endpoints</h2>
 							   <ul>
-							     <li>GET all movies: /api/v1/movies</li>
-							     <li>GET a movie by imdbId: /api/v1/movies/{imdbId}</li>
-							     <li>POST a new review: /api/v1/reviews<br>{"reviewBody": "Review text", "imdbId": "{imdbId}"}</br></li>
-							     <li>GET all reviews: /api/v1/reviews</li>
+							     <li>Get all movies: /api/v1/movies</li>
+							     <li>Get a movie by imdbId: /api/v1/movies/{imdbId}</li>
+							     <li>Create a new review: /api/v1/reviews<br>{"reviewBody": "Review text", "imdbId": "{imdbId}"}</br></li>
+							     <li>Get all reviews: /api/v1/reviews</li>
 							   </ul>
 			               </body>
 			           </html>
