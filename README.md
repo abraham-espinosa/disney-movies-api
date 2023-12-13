@@ -1,7 +1,7 @@
 # Disney Movies API  
 Get access to top disney movies of all-time and create reviews for each movie.
 
-### How to use Disney Movies API to get and post data:  
+### How to consume Disney Movies API to get and post data:  
 
 Main URL: https://abrahameg-movies.onrender.com
 * GET all movies: `/api/v1/movies`  
