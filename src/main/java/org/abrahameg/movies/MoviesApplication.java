@@ -13,15 +13,17 @@ public class MoviesApplication {
 			               <body>
 			               	   <h1>Disney Movies REST API</h1>
 			                   <p>Get access to top disney movies and create reviews for each movie.</p>
-			                   <h2>How to use Disney Movies API:</h2>
-			                   <p>Main URL: https://abrahameg-movies.onrender.com</p>
+			                   <br>
+			                   <h2>Root API Endpoint</h2>
+			                   <p>All API URLs are relative to <b>https://api-disneymovies.onrender.com/v1/</b></p>
+			                   <p>All methods are accessed through <b>https://api-disneymovies.onrender.com/v1/INSERT_METHOD</b></p>
+			                   <p>For example, the /movies call is accessed at <b>https://api-disneymovies.onrender.com/v1/movies</b></p>
+			                   <br>
 			                   <h2>API Endpoints</h2>
-							   <ul>
-							     <li>Get all movies: /api/v1/movies</li>
-							     <li>Get a movie by imdbId: /api/v1/movies/{imdbId}</li>
-							     <li>Create a new review: /api/v1/reviews<br>{"reviewBody": "Review text", "imdbId": "{imdbId}"}</br></li>
-							     <li>Get all reviews: /api/v1/reviews</li>
-							   </ul>
+							     <p>Get all movies: <b>/movies</b></p>
+							     <p>Get a movie by imdbId: <b>/movies/{imdbId}</b></p>
+							     <p>Create a new review: <b>/reviews</b> <br>Body: {"reviewBody": "Review text", "imdbId": "imdb ID"}</p>
+							     <p>Get all reviews: <b>/reviews</b></p>
 			               </body>
 			           </html>
 			           """;

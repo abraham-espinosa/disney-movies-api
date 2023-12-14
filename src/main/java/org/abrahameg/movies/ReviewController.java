@@ -11,7 +11,7 @@ import java.util.Map;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/v1/reviews")
+@RequestMapping("/v1/reviews")
 public class ReviewController {
     @Autowired
     private ReviewService reviewService;
