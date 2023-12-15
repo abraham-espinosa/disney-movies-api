@@ -14,8 +14,7 @@ Get all movies at `/movies`
 Get a movie by imdbId at `/movies/{imdbId}`
 
 Create a new review at `/reviews`   
-Body: 
-```
+Body:
 {
   "reviewBody": "Review text",
   "imdbId": "imdb ID"
